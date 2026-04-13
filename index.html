@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Web & App Development | Batch 01</title>
+    <title>Modern Web & App Development | Batch 02</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -25,7 +25,7 @@
         <div class="nav-wrapper">
           <a href="index.html" class="nav-brand">
             <i class="fas fa-code"></i>
-            <span class="brand-text"> <strong>SMIT</strong> Batch 01 </span>
+            <span class="brand-text"> <strong>SMIT</strong> Batch 02 </span>
           </a>
           <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
@@ -51,34 +51,86 @@
     </nav>
 
     <header class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="badge">Modern Web & App Development</div>
-          <h1>Build The Future of Web</h1>
-          <p class="instructor">
-            <i class="fas fa-user-graduate"></i>
-            Instructor: <strong>Syed Ahmed</strong>
-          </p>
-          <p class="tagline">
-            Master HTML, CSS, Git, GitHub & Responsive Design through hands-on
-            projects
-          </p>
-          <div class="btn-group">
-            <a href="#features" class="btn btn-primary">
-              <i class="fas fa-rocket"></i>
-              <span>Get Started</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/isyedahmed531"
-              target="_blank"
-              class="btn btn-secondary"
-            >
-              <i class="fab fa-linkedin"></i>
-              <span>Connect</span>
-            </a>
-          </div>
+      <!-- Carousel Slides -->
+      <div class="carousel">
+        <div
+          class="carousel-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div class="carousel-slide-overlay"></div>
+        </div>
+        <div
+          class="carousel-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div class="carousel-slide-overlay"></div>
+        </div>
+        <div
+          class="carousel-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1669023414162-8b0573b9c6b2?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div class="carousel-slide-overlay"></div>
+        </div>
+        <div
+          class="carousel-slide"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1505685296765-3a2736de412f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div class="carousel-slide-overlay"></div>
         </div>
       </div>
+
+      <!-- Hero Content (Centered) -->
+      <div class="hero-content">
+        <div class="badge">Modern Web & App Development</div>
+        <h1>Build The Future of Web</h1>
+        <p class="instructor">
+          <i class="fas fa-user-graduate"></i>
+          Instructor: <strong>Syed Ahmed</strong>
+        </p>
+        <p class="tagline">
+          Master HTML, CSS, Git, GitHub & Responsive Design through hands-on
+          projects
+        </p>
+        <div class="btn-group">
+          <a href="#features" class="btn btn-primary">
+            <i class="fas fa-rocket"></i>
+            <span>Get Started</span>
+          </a>
+          <a
+            href="https://linkedin.com/in/isyedahmed531"
+            target="_blank"
+            class="btn btn-secondary"
+          >
+            <i class="fab fa-linkedin"></i>
+            <span>Connect</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button class="indicator" aria-label="Slide 1"></button>
+        <button class="indicator" aria-label="Slide 2"></button>
+        <button class="indicator" aria-label="Slide 3"></button>
+        <button class="indicator" aria-label="Slide 4"></button>
+      </div>
+
       <div class="hero-decoration"></div>
     </header>
 
@@ -122,15 +174,16 @@
       <div class="container">
         <p class="footer-text">
           <i class="fas fa-graduation-cap"></i>
-          Saylani Mass IT Training Program
+          Guide by: Syed Ahmed | Instructor @ Saylani Mass IT Training Program
         </p>
         <p class="footer-meta">
-          &copy; 2025 Modern Web & App Development – Batch 01
+          &copy; 2025 Modern Web & App Development – Batch 02
         </p>
       </div>
     </footer>
 
     <script>
+      // Navigation Menu Toggle
       const navToggle = document.querySelector(".nav-toggle");
       const navMenu = document.querySelector(".nav-menu");
 
@@ -153,6 +206,26 @@
           navMenu.classList.remove("active");
         }
       });
+
+      // Carousel Indicators Update
+      const indicators = document.querySelectorAll(".indicator");
+      let currentSlide = 0;
+
+      function updateIndicators() {
+        indicators.forEach((indicator, index) => {
+          indicator.classList.remove("active");
+        });
+        indicators[currentSlide % indicators.length].classList.add("active");
+      }
+
+      // Update indicator every 5 seconds (carousel animation is 20s / 4 slides = 5s per slide)
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % indicators.length;
+        updateIndicators();
+      }, 5000);
+
+      // Initialize first indicator
+      updateIndicators();
     </script>
   </body>
 </html>
